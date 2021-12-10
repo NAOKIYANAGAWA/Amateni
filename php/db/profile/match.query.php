@@ -26,6 +26,18 @@ class MatchQuery
         return $result;
     }
 
+    public static function fetchByUserNickname($user_nickname)
+    {
+        $db = new DataSource;
+        $sql = 'select * from users where nickname = :nickname and del_flg != 1;';
+
+        $result = $db->select($sql, [
+            ':nickname' => $user_nickname
+        ], DataSource::CLS, UserModel::class);
+
+        return $result;
+    }
+
     public static function fetchAll()
     {
         $db = new DataSource;

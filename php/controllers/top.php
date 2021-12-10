@@ -7,11 +7,18 @@ use model\profile\MatchModel;
 function get()
 {
     //todo ソート機能
-    //検索機能
-    $matchs = MatchQuery::fetchAll();
-    $users = MatchQuery::fetchDistinctUsers();
 
-    //getでparamを渡してソート、検索
+    $user_nickname = get_param('search', null, false);
+
+    if ($user_nickname) {
+        $users = MatchQuery::fetchByUserNickname(trim($user_nickname));
+    } else {
+        $users = MatchQuery::fetchDistinctUsers();
+    }
+
+    $matchs = MatchQuery::fetchAll();
+
+    //getでparamを渡してソート
     $ranking = MatchModel::get_ranking($matchs, $users);
 
     \view\top\index($ranking);

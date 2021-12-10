@@ -38,6 +38,21 @@ function header()
                         </div>
                     </a>
                     <div class="col-md-auto">
+                        <form class="validate-form d-flex" action="<?php echo CURRENT_URI; ?>" method="GET" novalidate autocomplete="off">
+                            <div>
+                                <input list="datalistOptions" name="search" class="form-control" placeholder="ユーザー検索">
+                                <datalist id="datalistOptions">
+                                    <option value="San Francisco">
+                                    <option value="New York">
+                                    <option value="Seattle">
+                                    <option value="Los Angeles">
+                                    <option value="Chicago">
+                                </datalist>
+                            </div>
+                            <input type="submit" value="検索" class="btn btn-primary shadow-sm mr-3">
+                        </form>
+                    </div>
+                    <div class="col-md-auto">
                         <?php if (Auth::isLogin()) : ?>
                             <a href="<?php the_url('profile/match/create'); ?>" class="btn btn-primary mr-2">試合登録</a>
                             <a href="<?php the_url('chat'); ?>" class="btn btn-primary position-relative mr-2 pr-4 pl-4"><i class="far fa-envelope"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99</span></a>
