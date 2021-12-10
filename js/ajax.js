@@ -47,7 +47,6 @@ function send_message() {
     $input.addEventListener('click', function () {
         xhr.onreadystatechange = function() {
             if(xhr.readyState === 4 && xhr.status === 200) {
-                console.log(xhr.responseText);
                 window.location.reload();
                 if (xhr.responseText) {
                 }

@@ -6,7 +6,7 @@ function footer()
     ?>
             </main>
             <footer class="text-center p-3">
-                <span class="text-muted"> &copy; ATR.com - AmatuerTennisRanking</span>
+                <span class="text-muted"> &copy;amateni</span>
             </footer>
         </div>
         <!-- bootstrap-datepicker -->
