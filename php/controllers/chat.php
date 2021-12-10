@@ -41,6 +41,10 @@ function get()
         $init_chat_room = ChatQuery::fetchInitChatRoomByRoomId($room_id);
     } else {
         $init_chat_room = ChatQuery::fetchInitChatRoom($user);
+
+        if (!$init_chat_room) {
+            \view\chat\index();
+        }
     }
 
     //チャット権限
@@ -56,9 +60,6 @@ function get()
     $params['chat_rooms'] = $chat_rooms;
     $params['chats'] = $chats;
     $params['user'] = $user;
-    // echo '<pre>';
-    // print_r($params);
-    // echo '</pre>';
-    // exit;
+
     \view\chat\index($params);
 }

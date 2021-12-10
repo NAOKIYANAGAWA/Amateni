@@ -1,14 +1,14 @@
 <?php
 namespace view\chat;
 
-function index($params)
+function index($params = [])
 {
     ?>
 
 <?php \partials\header(); ?>
 
 <div class="container">
-    `<div class="row clearfix">
+    <div class="row clearfix">
         <div class="col-lg-12">
             <div class="card chat-app">
                 <div id="plist" class="people-list">

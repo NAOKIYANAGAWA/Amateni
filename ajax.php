@@ -43,6 +43,7 @@ require_once SOURCE_BASE . 'views/profile/match/delete.php';
 
 use db\profile\MatchQuery;
 use db\ChatQuery;
+use lib\Msg;
 
 if ($_GET['opponent_id']) {
     $opponents = MatchQuery::fetchAllOpponent($_GET['opponent_id']);
@@ -54,5 +55,14 @@ if ($_GET['opponent_id']) {
 
 if ($_POST) {
     $params = $_POST;
+
+    if (empty($params['chat_room_id'])) {
+        return;
+    }
+
+    if (empty($params['message'])) {
+        return;
+    }
+
     return ChatQuery::insert($params);
 }
