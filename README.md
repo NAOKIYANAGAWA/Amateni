@@ -56,13 +56,13 @@ admin<br>
 # 主な機能
 #### 対戦相手チェック
 存在する対戦相手かを非同期通信（ajax）でチェックし、存在する場合のみファームを送信できます。
-![kouseizu](https://user-images.githubusercontent.com/73929004/145503242-4e5e65af-cae6-41c7-8f05-f982de5d3df3.png)
-![kouseizu](https://user-images.githubusercontent.com/73929004/145503444-1eac209f-9861-4757-a08c-b971d4091ada.png)
+![kouseizu](https://user-images.githubusercontent.com/73929004/144736096-e5195c15-d968-4eff-875c-4de8c0048000.png)
+![kouseizu](https://user-images.githubusercontent.com/73929004/144736108-fa79441e-683f-4ab7-b779-90e9c131114d.png)
 
 #### チャット機能
 対戦したプレーヤーとチャットができます。
-![kouseizu](https://user-images.githubusercontent.com/73929004/144736096-e5195c15-d968-4eff-875c-4de8c0048000.png)
-![kouseizu](https://user-images.githubusercontent.com/73929004/144736108-fa79441e-683f-4ab7-b779-90e9c131114d.png)
+![kouseizu](https://user-images.githubusercontent.com/73929004/145503242-4e5e65af-cae6-41c7-8f05-f982de5d3df3.png)
+![kouseizu](https://user-images.githubusercontent.com/73929004/145503444-1eac209f-9861-4757-a08c-b971d4091ada.png)
 
 #### 施設名から市区町村名を自動で入力
 Google Maps API(Geocoding API, Maps JavaScript API)を利用して施設名から市区町村を取得して自動で入力します。
