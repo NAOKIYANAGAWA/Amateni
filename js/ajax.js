@@ -82,7 +82,6 @@ function show_user_candidates() {
                     var option = document.createElement("option");
                     option.value = json[i]['nickname'];
                     select.appendChild(option);
-                    console.log(json[i]['nickname']);
                 }
                 }
             }
