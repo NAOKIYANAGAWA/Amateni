@@ -66,3 +66,14 @@ if ($_POST) {
 
     return ChatQuery::insert($params);
 }
+
+if ($_GET['nickname']) {
+    $nicknames = MatchQuery::fetchUserCandidates($_GET['nickname']);
+
+    // $nicknames_json = [];
+    // foreach ($nicknames as $nickname) {
+    //     $nicknames_json .= $nickname->nickname;
+    // }
+    $json = json_encode($nicknames);
+    echo $json;
+}

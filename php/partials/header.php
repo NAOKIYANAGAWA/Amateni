@@ -40,14 +40,8 @@ function header()
                     <div class="col-md-auto">
                         <form class="validate-form d-flex" action="<?php echo CURRENT_URI; ?>" method="GET" novalidate autocomplete="off">
                             <div>
-                                <input list="datalistOptions" name="search" class="form-control" placeholder="ユーザー検索">
-                                <datalist id="datalistOptions">
-                                    <option value="San Francisco">
-                                    <option value="New York">
-                                    <option value="Seattle">
-                                    <option value="Los Angeles">
-                                    <option value="Chicago">
-                                </datalist>
+                                <input list="datalistOptions" id="nickname" name="search" class="form-control" placeholder="ユーザー検索">
+                                <datalist id="datalistOptions"></datalist>
                             </div>
                             <input type="submit" value="検索" class="btn btn-primary shadow-sm mr-3">
                         </form>

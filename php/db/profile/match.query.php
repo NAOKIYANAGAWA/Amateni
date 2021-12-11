@@ -379,4 +379,16 @@ class MatchQuery
 
         return $result;
     }
+
+    public static function fetchUserCandidates($nickname)
+    {
+        $db = new DataSource;
+        $sql = 'select * from users where nickname like :nickname and del_flg != 1;';
+
+        $result = $db->select($sql, [
+            ':nickname' => $nickname.'%'
+        ], DataSource::CLS, UserModel::class);
+
+        return $result;
+    }
 }

@@ -62,3 +62,32 @@ function send_message() {
         xhr.send( 'chat_room_id='+ $chat_room_id + '&user_id='+ $user_id + '&message=' + $chat_message );
     });
 }
+
+show_user_candidates();
+function show_user_candidates() {
+    var xhr = new XMLHttpRequest();
+
+    const $input = document.querySelector('#nickname');
+
+    if (!$input) {
+        return;
+    }
+
+    $input.addEventListener('input', function () {
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === 4 && xhr.status === 200) {
+                var select = document.querySelector("#datalistOptions");
+                var json = JSON.parse( xhr.responseText );
+                for (let i = 0; i < json.length; i++) {
+                    var option = document.createElement("option");
+                    option.value = json[i]['nickname'];
+                    select.appendChild(option);
+                    console.log(json[i]['nickname']);
+                }
+                }
+            }
+        $nickname = document.querySelector('#nickname').value;
+        xhr.open('GET', 'http://localhost/amateni/ajax.php?nickname='+$nickname);
+        xhr.send();
+    });
+}
