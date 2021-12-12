@@ -18,6 +18,7 @@ function footer()
         <script src="<?php echo BASE_JS_PATH ?>ajax.js"></script>
         <script src="<?php echo BASE_JS_PATH ?>googlemap-api.js"></script>
         <script src="<?php echo BASE_JS_PATH ?>datepicker.js"></script>
+        <script src="<?php echo BASE_JS_PATH ?>search.js"></script>
         <!-- googlemap api -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfDNKw9N8qwH3qg2q1liO43UnrchbcjiQ&libraries=places&callback=initMap" async defer></script>
 

@@ -29,33 +29,46 @@ function header()
     <body>
         <div id="container">
             <header class="container my-2">
-                <nav class="row align-items-center py-2">
-                    <a href="<?php the_url('/'); ?>" class="col-md d-flex align-items-center mb-3 mb-md-0">
-                        <img width="50" class="mr-2" src="<?php echo BASE_IMAGE_PATH; ?>logo.png" alt="サイトロゴ">
-                        <div class="ml-3">
-                            <span class="d-block w-100 m-0 h2">アマテニ</span>
-                            <span class="text-center d-block w-100">週末テニスプレイヤーランキング</span>
-                        </div>
-                    </a>
-                    <div class="col-md-auto">
-                        <form class="validate-form d-flex" action="<?php echo CURRENT_URI; ?>" method="GET" novalidate autocomplete="off">
-                            <div>
-                                <input list="datalistOptions" id="nickname" name="search" class="form-control" placeholder="ユーザー検索">
-                                <datalist id="datalistOptions"></datalist>
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid d-flex justify-content-end">
+                        <a href="<?php the_url('/'); ?>" class="col-md d-flex align-items-center mb-3 mb-md-0">
+                            <img width="50" class="mr-2" src="<?php echo BASE_IMAGE_PATH; ?>logo.png" alt="サイトロゴ">
+                            <div class="ml-3">
+                                <span class="d-block w-100 m-0 h2">アマテニ</span>
+                                <span class="text-center d-block w-100">週末テニスプレイヤーランキング</span>
                             </div>
-                            <input type="submit" value="検索" class="btn btn-primary shadow-sm mr-3">
-                        </form>
-                    </div>
-                    <div class="col-md-auto">
-                        <?php if (Auth::isLogin()) : ?>
-                            <a href="<?php the_url('profile/match/create'); ?>" class="btn btn-primary mr-2">試合登録</a>
-                            <a href="<?php the_url('chat'); ?>" class="btn btn-primary position-relative mr-2 pr-4 pl-4"><i class="far fa-envelope"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99</span></a>
-                            <a href="<?php the_url('profile?user_id='); ?><?php echo UserModel::getSession()->id; ?>" class="mr-2">マイページ</a>
-                            <a href="<?php the_url('logout'); ?>">ログアウト</a>
-                        <?php else: ?>
-                            <a href="<?php the_url('register'); ?>" class="btn btn-primary mr-2">登録</a>
-                            <a href="<?php the_url('login'); ?>">ログイン</a>
-                        <?php endif; ?>
+                        </a>
+                        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <form class="validate-form mt-3 d-flex row" action="<?php echo CURRENT_URI; ?>" method="GET" novalidate autocomplete="off">
+                                <input list="datalistOptions" id="nickname" name="search" class="form-control col-12" placeholder="ユーザー検索">
+                                <datalist id="datalistOptions"></datalist>
+                                <input type="submit" value="検索" class="btn btn-primary shadow-sm mt-3 col-12">
+                            </form>
+                            <?php if (Auth::isLogin()) : ?>
+                                <div class="mt-3 text-center">
+                                    <a href="<?php the_url('profile/match/create'); ?>" class="">試合登録</a>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <a href="<?php the_url('chat'); ?>" class="">メッセージ</a>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <a href="<?php the_url('profile?user_id='); ?><?php echo UserModel::getSession()->id; ?>" class="mr-2">マイページ</a>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <a href="<?php the_url('logout'); ?>">ログアウト</a>
+                                </div>
+                            <?php else: ?>
+                                <div class="mt-3 text-center">
+                                    <a href="<?php the_url('register'); ?>" class="">登録</a>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <a href="<?php the_url('login'); ?>">ログイン</a>
+                                </div>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </nav>
             </header>
