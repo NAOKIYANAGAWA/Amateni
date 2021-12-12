@@ -42,7 +42,7 @@ function header()
                         <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <form class="validate-form mt-3 d-flex row" action="<?php echo CURRENT_URI; ?>" method="GET" novalidate autocomplete="off">
+                            <form class="validate-form mt-3 d-flex row" action="<?php echo BASE_CONTEXT_PATH; ?>" method="GET" novalidate autocomplete="off">
                                 <input list="datalistOptions" id="nickname" name="search" class="form-control col-12" placeholder="ユーザー検索">
                                 <datalist id="datalistOptions"></datalist>
                                 <input type="submit" value="検索" class="btn btn-primary shadow-sm mt-3 col-12">

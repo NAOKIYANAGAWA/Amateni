@@ -20,10 +20,7 @@ function detail($matchs, $score, $users)
         $score->fifth_set_game_point_opponent
     ]; ?>
 
-    <div class="pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h3">試合詳細</h1>
-    </div>
-    <div class="text-center mb-3"><span class="h3">スコア</span></div>
+    <div class="text-center mb-3 mt-3"><span class="h3">スコア</span></div>
     <div class="text-center mt-3"><span class="h5">TOTAL SET</span></div>
     <div class="container d-flex justify-content-center align-items-center">
     <?php foreach ($matchs as $match) :?>

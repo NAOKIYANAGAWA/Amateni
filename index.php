@@ -28,7 +28,7 @@ require_once SOURCE_BASE . 'db/profile/match.query.php';
 // Partials
 require_once SOURCE_BASE . 'partials/header.php';
 require_once SOURCE_BASE . 'partials/footer.php';
-require_once SOURCE_BASE . 'partials/profile/side_menu.php';
+require_once SOURCE_BASE . 'partials/profile/nav_tabs.php';
 require_once SOURCE_BASE . 'partials/profile/match/history.php';
 require_once SOURCE_BASE . 'partials/profile/match/dashboard.php';
 require_once SOURCE_BASE . 'partials/profile/match/detail.php';
