@@ -5,7 +5,7 @@ https://github.com/NAOKIYANAGAWA/amateni_old<br>
 # サイト名：アマテ二
 
 # URL
-http://amateurtennis.s203.xrea.com/amateni/
+https://amateurtennis.shop/amateni/
 
 ### ログイン情報
 #### Email:<br>
