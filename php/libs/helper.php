@@ -69,3 +69,10 @@ function is_staticListParam($val, $staic_list_param)
 
     return $res;
 }
+
+function get_active_nab_tab($tab_name)
+{
+    if (str_replace(BASE_CONTEXT_PATH, '', parse_url(CURRENT_URI)['path']) == $tab_name) {
+        return 'active';
+    }
+}
