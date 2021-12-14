@@ -25,7 +25,7 @@ function auto_complate_user() {
             }
         }
         $opponent_id = document.querySelector('#opponent_id').value;
-        xhr.open('GET', 'http://localhost/amateni/ajax.php?opponent_id='+$opponent_id);
+        xhr.open('GET', 'https://amateurtennis.shop/amateni/ajax.php?opponent_id='+$opponent_id);
         xhr.send();
     });
 }
@@ -47,6 +47,7 @@ function send_message() {
     $input.addEventListener('click', function () {
         xhr.onreadystatechange = function() {
             if(xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText);
                 window.location.reload();
                 if (xhr.responseText) {
                 }
@@ -57,7 +58,7 @@ function send_message() {
         $user_id = document.querySelector('#user_id').value;
         $chat_message = document.querySelector('#chat_message').value;
 
-        xhr.open('POST', 'http://localhost/amateni/ajax.php');
+        xhr.open('POST', 'https://amateurtennis.shop/amateni/ajax.php');
         xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
         xhr.send( 'chat_room_id='+ $chat_room_id + '&user_id='+ $user_id + '&message=' + $chat_message );
     });
@@ -86,7 +87,7 @@ function show_user_candidates() {
                 }
             }
         $nickname = document.querySelector('#nickname').value;
-        xhr.open('GET', 'http://localhost/amateni/ajax.php?nickname='+$nickname);
+        xhr.open('GET', 'https://amateurtennis.shop/amateni/ajax.php?nickname='+$nickname);
         xhr.send();
     });
 }
