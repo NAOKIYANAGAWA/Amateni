@@ -39,7 +39,7 @@ function header()
                 <nav class="text-right">
                     <button type="button" class="btn" data-toggle="collapse" data-target="#navbarDropdown"><span class="h2"><i class="fas fa-bars"></i></span></button>
                     <div id="navbarDropdown" class="collapse">
-                        <form class="validate-form mt-3 d-flex row" action="<?php echo CURRENT_URI; ?>" method="GET" novalidate autocomplete="off">
+                        <form class="validate-form mt-3 d-flex row" action="<?php the_url('top'); ?>" method="GET" novalidate autocomplete="off">
                             <input list="datalistOptions" id="nickname" name="search" class="form-control col-12" placeholder="ユーザー検索">
                             <datalist id="datalistOptions"></datalist>
                             <input type="submit" value="検索" class="btn btn-primary shadow-sm mt-3 col-12">
