@@ -44,6 +44,9 @@ require_once SOURCE_BASE . 'views/profile/match/edit.php';
 require_once SOURCE_BASE . 'views/profile/match/delete.php';
 require_once SOURCE_BASE . 'views/chat.php';
 
+//Line api
+require('vendor/autoload.php');
+
 use function lib\route;
 
 session_start();

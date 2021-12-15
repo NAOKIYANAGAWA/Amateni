@@ -37,6 +37,13 @@ function index()
         </div>
     </div>
 
+    <div class="text-center mt-5">
+        <p class="text-center">Lineでログイン</p>
+        <button type="button" class="btn btn-link">
+            <a href="<?php echo LINE_LOGIN_URL; ?>"><img src="<?php echo BASE_IMAGE_PATH; ?>line_btn_login_base.png" alt="" width="100%" height="50px"></a>
+        </button>
+    </div>
+
     <?php \partials\footer(); ?>
 
 <?php
