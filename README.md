@@ -68,6 +68,9 @@ admin<br>
 Google Maps API(Geocoding API, Maps JavaScript API)を利用して施設名から市区町村を取得して自動で入力します。
 ![kouseizu](https://user-images.githubusercontent.com/73929004/144736288-1067dcbe-ba66-4c36-98b2-c831fedbe55f.png)
 
+#### Lineでログイン
+![kouseizu](https://user-images.githubusercontent.com/73929004/146302372-4fec6b3c-2446-455e-814b-2bace6a4abe0.png)
+
 ## ABOUT ME
 Qiita
 https://qiita.com/naoki_y
