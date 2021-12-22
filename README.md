@@ -52,7 +52,10 @@ admin<br>
    - MySQL
 #### 本番環境
    - XREAレンタルサーバー
-   
+
+# ER図
+![kouseizu](https://user-images.githubusercontent.com/73929004/147021923-2108c7ec-30af-427c-92db-4922ae549c94.png)
+
 # 主な機能
 #### 対戦相手チェック
 存在する対戦相手かを非同期通信（ajax）でチェックし、存在する場合のみファームを送信できます。
