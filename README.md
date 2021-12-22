@@ -54,6 +54,7 @@ admin<br>
    - XREAレンタルサーバー
 
 # ER図
+※Laravelで利用できるFakerとFactoryを使用してダミーデータを作成し、１００件のユーザーデータ、1万件の試合とスコアデータをDBへ投入しております。
 ![kouseizu](https://user-images.githubusercontent.com/73929004/147021923-2108c7ec-30af-427c-92db-4922ae549c94.png)
 
 # 主な機能
